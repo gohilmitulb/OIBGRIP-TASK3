@@ -15,12 +15,14 @@ body {
     top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 100vh;
+    height: 80vh;
 }
 .title{
     text-align: center;
     color: #CCD6DD;
     font-size: 1.3rem;
+    background: #2a3541;
+    padding: 0.8rem;
 }
 #newtask {
     display: flex;
