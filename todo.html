@@ -9,13 +9,26 @@
 </head>
 <body>
     <div class="container">
+        <div class="title">
+            <h1>My to-do list</h1>
+        </div>
+        
         <div id="newtask">
             <input type="text" placeholder="Enter Task">
             <button id="push">Add</button>
         </div>
-        <div id="tasks"></div>
+        <div class="afteradd">
+            <div id="pending-tasks">
+                <h4 class="pending-head">Pending</h4>
+                <small>Add some tasks....</small>
+            </div>
+            <div id="completed-tasks">
+                <h4 class="completed-head">Completed</h4>
+                <small>Complete some tasks...</small>
+            </div>  
+        </div>
     </div>
 </body>
-<script src="todo.js">
-</script>
+
+<script src="todo.js"></script>
 </html>
