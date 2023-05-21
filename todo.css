@@ -2,24 +2,35 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body {
     background-color: #1d2630;
-    height: 35%;
-    width: 700px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     position: absolute;
-    margin: auto;
-    top: 10%;
-    left: 25%;
-    padding: 30px 0;
-    border-radius: 8px;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+}
+.title{
+    text-align: center;
+    color: #CCD6DD;
+    font-size: 1.3rem;
 }
 #newtask {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     padding: 20px 15px;
     background: #fff;
     border-radius: 5px;
-    width: 100vh;
+    width: 70rem;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 #newtask input {
@@ -31,35 +42,70 @@ body {
     padding: 10px;
     color: #111111;
     font-weight: 500; 
-    position: relative;   
+    transition: 1s;
 }
 #newtask input:focus {
-
     outline: none;
-    border-color: #19a68c;
+    border-color: #252525;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 #newtask button {
     position: relative;
     width: 70px;
-    height: 45px;
+    height: 40px;
     border-radius: 3px;
     font-weight: 500;
     font-size: 16px;
-    background: #19a68c;
+    background: #1d2630;
     color: #fff;
     border: none;
     outline: none;
     cursor: pointer;
-    left: 1.5vh;
 }
-#tasks {
-    width: 135%;
+#pending-tasks {
     position: relative;
-    margin-top: 40px;
-    /* background: #fff; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     padding: 30px 40px;
     border-radius: 5px;
     font-size: 2rem;
+}
+#pending-tasks .pending-head{
+    color: #CCD6DD;
+}
+#pending-tasks {
+    border: 2px solid #CCD6DD;
+    border-radius: 1rem;
+}
+#pending-tasks small{
+    font-size: 1.5rem;
+    color: #8f9091;
+}
+#completed-tasks{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 30px 40px;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+#completed-tasks .completed-head{
+    color: #CCD6DD;
+}
+#completed-tasks{
+    border: 2px solid #CCD6DD;
+    border-radius: 1rem;
+}
+#completed-tasks small{
+    font-size: 1.5rem;
+    color: #8f9091;
+}
+.afteradd{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 .task {
     background: #fff;
@@ -71,7 +117,8 @@ body {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    border-bottom: 2px solid #d1d3d4;
+    border: 2px solid #d1d3d4;
+    border-radius: 0.8rem;
 }
 .task span {
     font-size: 2rem;
@@ -90,4 +137,48 @@ body {
 .completed {
     text-decoration: line-through;
     opacity: 0.7;
+}
+
+@media(max-width: 1200px){
+    #newtask{
+        width: 50rem;
+    }
+}
+
+@media(max-width: 800px){
+    .title h1{
+        font-size: 1.2rem;
+    }
+    #newtask{
+        width: 30rem;
+    }
+    #newtask input{
+        font-size: 1rem;
+    }
+    #newtask button{
+        font-size: 12px;
+    }
+    #pending-tasks{
+        font-size: 1rem;
+        gap: 0rem;
+    }
+    #pending-tasks small{
+        font-size: 1rem;
+    }
+    #completed-tasks{
+        font-size: 1rem;
+        gap: 0rem;
+    }
+    #completed-tasks small{
+        font-size: 1rem;
+    }
+    .task span{
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 500px){
+    #newtask{
+        width: 20rem;
+    }
 }
